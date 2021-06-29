@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="sample_test" translate="label" sortOrder="15">
+            <label>Sample Test</label>
+        </tab>
+        <section id="sampletest_erp" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>ERP Integration</label>
+            <tab>sample_test</tab>
+            <resource>Sample_TestModule::sampletest_erp</resource>
+            <group id="sales" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Sales</label>
+                <field id="is_active" translate="label" type="select" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Active</label>
+                    <comment>Enable/Disable ERP integration.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_key" translate="label" type="text" sortOrder="20" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Api Key</label>
+                </field>
+                <field id="endpoint" translate="label" type="text" sortOrder="30" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Endpoint</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
